@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
     /* read arguments */
     if(argc != 3)
     {
-	printf("Error with client\n")
-        printf("Usage: %s 'ip' 'message'\n");
+	printf("Error with client\n");
+        printf("Usage:'ip' 'message'\n");
         return 1;
     }
    
