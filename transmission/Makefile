@@ -1,6 +1,9 @@
 
-remote: 
-	gcc -o remote remotepc.c -W -Wall
+default: 
+	gcc -o remote remotepc.c -Wall
+	gcc -o server server.c -Wall
+
+
 
 
 
