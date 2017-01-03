@@ -1,2 +1,4 @@
 /transmission/remote
 /transmission/server
+*.[oa]
+*~
