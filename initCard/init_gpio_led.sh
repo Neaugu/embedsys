@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LED=21
+export LED=117
 #create access functions /sys/class/gpio/gpio$LED/
 echo $LED > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio$LED/direction
