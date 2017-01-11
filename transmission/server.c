@@ -8,8 +8,10 @@
 #include <string.h>
 #include <sys/types.h>
 #include <syslog.h>
+#include "projet.h"
 
 #define PORT 5000
+#define CESARKEY 4
 
 int main(int argc, char *argv[])
 {
@@ -17,6 +19,7 @@ int main(int argc, char *argv[])
     int listenfd = 0, connfd = 0;
     struct sockaddr_in serv_addr;
     char recv_buff[1024];
+    char * morse;
     memset(recv_buff, '0', sizeof(recv_buff));
 
     /* init syslog from be */
@@ -40,12 +43,21 @@ int main(int argc, char *argv[])
     /* functionnal */
     while (1)
     {
+    	   bzero(recv_buff,sizeof(recv_buff));
+    	   
         connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
         int bytes = read(connfd, recv_buff, sizeof(recv_buff)-1);
 	
         if (bytes > 0){
-        	close(connfd);
-	    	printf("%s\n",recv_buff);
+	    	printf("Message received is : %s\n",recv_buff);
+	    	cesar_decrypt(CESARKEY,recv_buff);
+	    	printf("Plain message is : %s\n",recv_buff);
+	    	
+	    	/* envoie le morse du plain au client */
+		morse = traduc(recv_buff);	    
+	    	send(connfd,morse,1024,0);
+	    	
+	    	close(connfd);
 	}
 	else{
 		printf("%s\n","No bytes received");

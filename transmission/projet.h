@@ -1,5 +1,3 @@
-/* header file for transversal method */
-
 char* traduc (char* message);
 
 int cesar_crypt (int decallage, char * texte);
