@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "lancement du serveur"
+/root/blink_long.sh &
+/root/serverARMNew &

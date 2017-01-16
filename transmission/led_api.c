@@ -22,8 +22,8 @@ usleep(250000);
 }
 
 void write_file(int value){
-/*
-FILE *f = fopen("/sys/class/gpio/gpio$LED/value", "w");
+
+FILE *f = fopen("/sys/class/gpio/gpio117/value", "w");
 
 if (f == NULL)
 	{
@@ -35,12 +35,14 @@ if (f == NULL)
 fprintf(f, "%d", value);
 
 fclose(f);
-*/
+
 //(value ==0)?printf("."):printf("_");
 
 }
 
 void play_morse(char* sentence){
+
+
 
 int len = strlen(sentence);
 int i;
@@ -67,7 +69,19 @@ for(i=0; i<len; i++){
 		  break; /* optional */
 		  
 	}
-
+	
 }
+// remise a zero de la LED
+FILE *f = fopen("/sys/class/gpio/gpio117/value", "w");
 
+if (f == NULL)
+	{
+		printf("Error opening file!\n");
+		exit(1);
+	}
+
+
+fprintf(f, "%d", 0);
+
+fclose(f);
 }
