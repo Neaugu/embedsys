@@ -20,7 +20,7 @@ $ git clone https://github.com/Neaugu/embedsys
 
 Dans le cadre de ce projet nous devions mettre en place une communication entre une carte Armadeus APF28 et un ordinateur. Pour cela nous avons codé un serveur sur la carte et un client sur le poste utilisateur. L'utilisateur transmet un message à la carte. Ce message est crypté par l'utilisateur et transmis à la carte, qui le décrypte et le transmet en morse via un signal lumineux.
 
-utilisateur    == message clair ==>    client   == message crypté ==>    serveur    == message décrypté en morse ==>    LED
+utilisateur    == [message clair] ==>    client   == [message crypté] ==>    serveur    == [message décrypté en morse] ==>    LED
 
 -----
 ## Compilation
