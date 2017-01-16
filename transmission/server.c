@@ -56,6 +56,10 @@ int main(int argc, char *argv[])
 	    	/* envoie le morse du plain au client */
 		morse = traduc(recv_buff);	    
 	    	send(connfd,morse,1024,0);
+		
+		/* Call morse ici ici */
+		play_morse(morse);
+
 	    	
 	    	close(connfd);
 	}
