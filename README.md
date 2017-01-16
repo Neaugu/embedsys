@@ -24,7 +24,7 @@ utilisateur    == [message clair] ==>    client   == [message crypté] ==>    se
 
 -----
 ## Compilation
-Lancer dans la commande make dans la console utilisateur.
+Lancer dans la commande make du dossier transmission dans la console utilisateur.
 
 -----
 ## Exécution
