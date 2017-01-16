@@ -12,7 +12,6 @@ github https://github.com/Neaugu/embedsys.
 
 Si vous voulez cloner entièrement le dépôt :
 
------
 $ git clone https://github.com/Neaugu/embedsys
 -----
 
