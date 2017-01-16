@@ -1,6 +1,6 @@
 # Projet Armadeus 
 
-:author: Groupe 3 : Neau Guillaume, Boenning Hannah, Tomezac Julien, Soulié Camille, Cotten Guillaume
+Authors : Groupe 3 : Neau Guillaume, Boenning Hannah, Tomezac Julien, Soulié Camille, Cotten Guillaume
 
 :email: [Prénom].[Nom]@ensta-bretagne.org
 
