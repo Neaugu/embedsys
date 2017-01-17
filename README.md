@@ -24,7 +24,8 @@ utilisateur    == [message clair] ==>    client   == [message crypté] ==>    se
 
 -----
 ## Compilation
-Lancer la commande make (du dossier transmission) dans un terminal.
+Tous les fichiers nécessaires à l'exécution se trouvent dans le répertoire "transmission"
+Lancer la commande make (du répertoire transmission) dans un terminal.
 
 -----
 ## Exécution
