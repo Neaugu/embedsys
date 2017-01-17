@@ -24,12 +24,12 @@ utilisateur    == [message clair] ==>    client   == [message crypté] ==>    se
 
 -----
 ## Compilation
-Lancer dans la commande make du dossier transmission dans la console utilisateur.
+Lancer la commande make (du dossier transmission) dans un terminal.
 
 -----
 ## Exécution
 1. Allumer la carte. Le serveur se lance automatiquement au démarrage.
-2. Lancer le client sur le poste : ./remote [adresse IP du serveur] [message]
+2. Lancer le client dans un terminal sur le poste utilisateur : ./remote [adresse IP du serveur] [message]
 3. Observer la LED
 
 
