@@ -42,12 +42,14 @@ Puis lancer la commande make (du répertoire transmission) dans un terminal.
 
 Suite à la compilation vous obtenez deux exécutable: remote et server.
 
+Les fichiers à envoyer à la carte sont le server et les scripts se trouvant dans codeCard.
+
 Si vous n'aviez pas le gcc de votre carte, vous trouverez une version fonctionnelle de server dans codeCard nommée serverARMNew.
 
 Pour installer les programmes sur la carte il suffit:
 
 
-De mettre les fichiers blink_long.sh et server (ou serverARMNew), se trouvant sous codeCard, dans /root/.
+De mettre les fichiers blink_long.sh et server (ou serverARMNew) dans /root/.
 
 Puis S99app dans /etc/init.d/ en vérifiant qu'il a le droit d'être exécuté, sinon faire:
 
