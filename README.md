@@ -42,6 +42,7 @@ Pour installer les programmes sur la carte il suffit:
 De mettre les fichiers blink_long.sh et server (ou serverARMNew), se trouvant sous codeCard, dans /root/.
 Puis S99app dans /etc/init.d/ en vérifiant qu'il a le droit d'être exécuté, sinon faire:
 chmod a+x /etc/init.d/S99app
+Enfin rebootez la carte pour finaliser l'installation.
 -----
 ## Exécution
 1. Allumer la carte. Le serveur se lance automatiquement au démarrage.
