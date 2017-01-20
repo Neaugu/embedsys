@@ -24,6 +24,7 @@ utilisateur    == [message clair] ==>    client   == [message crypté] ==>    se
 
 -----
 ## Compilation
+
 Tous les fichiers nécessaires à l'exécution se trouvent dans le répertoire "transmission"
 
 Dans le Makefile il faut remplacer "gcc" de la ligne:
@@ -36,6 +37,7 @@ Puis lancer la commande make (du répertoire transmission) dans un terminal.
 
 -----
 ## Installation
+
 Suite à la compilation vous obtenez deux exécutable: remote et server.
 Si vous n'aviez pas le gcc de votre carte, vous trouverez une version fonctionnelle de server dans codeCard nommée serverARMNew.
 
