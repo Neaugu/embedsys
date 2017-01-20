@@ -25,7 +25,7 @@ utilisateur    == [message clair] ==>    client   == [message crypté] ==>    se
 -----
 ## Compilation
 
-Tous les fichiers nécessaires à l'exécution se trouvent dans le répertoire "transmission"
+Tous les fichiers nécessaires à la compilation se trouvent dans le répertoire "transmission"
 
 Dans le Makefile il faut remplacer "gcc" de la ligne: 
 
