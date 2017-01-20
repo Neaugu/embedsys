@@ -5,83 +5,76 @@
 #include <stdio.h>
 #include <string.h>
 
-void dot(){
-write_file(1);
-usleep(500000);
-write_file(0);
-usleep(250000);
+void dot() {
+	write_file(1);
+	usleep(500000);
+	write_file(0);
+	usleep(250000);
 
 }
 
-void dash(){
-write_file(1);
-usleep(1000000);
-write_file(0);
-usleep(250000);
+void dash() {
+	write_file(1);
+	usleep(1000000);
+	write_file(0);
+	usleep(250000);
 
 }
 
-void write_file(int value){
+void write_file(int value) {
 
-FILE *f = fopen("/sys/class/gpio/gpio117/value", "w");
+	FILE *f = fopen("/sys/class/gpio/gpio117/value", "w");
 
-if (f == NULL)
-	{
+	if (f == NULL) {
 		printf("Error opening file!\n");
 		exit(1);
 	}
 
+	fprintf(f, "%d", value);
 
-fprintf(f, "%d", value);
-
-fclose(f);
+	fclose(f);
 
 //(value ==0)?printf("."):printf("_");
 
 }
 
-void play_morse(char* sentence){
+void play_morse(char* sentence) {
 
+	int len = strlen(sentence);
+	int i;
 
+	for (i = 0; i < len; i++) {
 
-int len = strlen(sentence);
-int i;
+		switch (sentence[i]) {
 
-for(i=0; i<len; i++){
+		case '0':
+			dot();
+			break; 
 
-	
-	switch(sentence[i]) {
+		case '1':
+			dash();
+			break; 
 
-	   case '0':
-		  dot();
-		  break; /* optional */
-	
-	   case '1':
-		  dash();
-		  break; /* optional */
-	  
-	  case '2':
-		  usleep(500000);
-		  break; /* optional */
-	  
-	  case '3':
-		  usleep(1000000);
-		  break; /* optional */
-		  
+		case '2':
+			usleep(500000);
+			break; 
+
+		case '3':
+			usleep(1000000);
+			break; 
+
+		}
+
 	}
-	
-}
 // remise a zero de la LED
-FILE *f = fopen("/sys/class/gpio/gpio117/value", "w");
+	FILE *f = fopen("/sys/class/gpio/gpio117/value", "w");
 
-if (f == NULL)
-	{
+	if (f == NULL) {
 		printf("Error opening file!\n");
 		exit(1);
 	}
 
+	fprintf(f, "%d", 0);
 
-fprintf(f, "%d", 0);
-
-fclose(f);
+	fclose(f);
 }
