@@ -27,10 +27,12 @@ utilisateur    == [message clair] ==>    client   == [message crypté] ==>    se
 
 Tous les fichiers nécessaires à l'exécution se trouvent dans le répertoire "transmission"
 
-Dans le Makefile il faut remplacer "gcc" de la ligne:
+Dans le Makefile il faut remplacer "gcc" de la ligne: 
+
 gcc -o server server.c led_api.c CESAR.c traducteur.c projet.h -W
 
-par le chemin du gcc de votre carte cible, comme ceci par exemple:
+par le chemin du gcc de votre carte cible, comme ceci par exemple: 
+
 /home/u/Documents/armadeus/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-gcc -o server server.c led_api.c CESAR.c traducteur.c projet.h -W
 
 Puis lancer la commande make (du répertoire transmission) dans un terminal.
@@ -39,12 +41,18 @@ Puis lancer la commande make (du répertoire transmission) dans un terminal.
 ## Installation
 
 Suite à la compilation vous obtenez deux exécutable: remote et server.
+
 Si vous n'aviez pas le gcc de votre carte, vous trouverez une version fonctionnelle de server dans codeCard nommée serverARMNew.
 
 Pour installer les programmes sur la carte il suffit:
+
+
 De mettre les fichiers blink_long.sh et server (ou serverARMNew), se trouvant sous codeCard, dans /root/.
+
 Puis S99app dans /etc/init.d/ en vérifiant qu'il a le droit d'être exécuté, sinon faire:
+
 chmod a+x /etc/init.d/S99app
+
 Enfin rebootez la carte pour finaliser l'installation.
 
 -----
