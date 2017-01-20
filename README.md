@@ -33,6 +33,7 @@ par le chemin du gcc de votre carte cible, comme ceci par exemple:
 /home/u/Documents/armadeus/buildroot/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-gcc -o server server.c led_api.c CESAR.c traducteur.c projet.h -W
 
 Puis lancer la commande make (du répertoire transmission) dans un terminal.
+
 -----
 ## Installation
 Suite à la compilation vous obtenez deux exécutable: remote et server.
@@ -43,6 +44,7 @@ De mettre les fichiers blink_long.sh et server (ou serverARMNew), se trouvant so
 Puis S99app dans /etc/init.d/ en vérifiant qu'il a le droit d'être exécuté, sinon faire:
 chmod a+x /etc/init.d/S99app
 Enfin rebootez la carte pour finaliser l'installation.
+
 -----
 ## Exécution
 1. Allumer la carte. Le serveur se lance automatiquement au démarrage.
